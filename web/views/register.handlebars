@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/users.css">
+<h2>Create Account</h2>
+<form id="registerForm">
+    <div class="avatar-selection">
+        <label>Choose an Avatar:</label>
+        <div>
+            {{#each avatars}}
+                <label for="avatar-{{@index}}">
+                    <input type="radio" id="avatar-{{@sindex}}" name="avatar" value="{{this}}" required>
+                    <img src="/avatars/{{this}}" alt="Avatar {{@index}}">
+                </label>
+            {{/each}}
+        </div>
+    </div>
+
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameFeedback"></span>
+    </div>
+
+    <div>
+        <label for="realName">Real Name:</label>
+        <input type="text" id="realName" name="realName" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span id="passwordFeedback"></span>
+    </div>
+
+    <div>
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+    </div>
+
+    <div>
+        <label for="description">About Yourself:</label>
+        <textarea id="description" name="description"></textarea>
+    </div>
+
+
+    <button type="submit" disabled>Register</button>
+</form>
+
+<script src="/js/registration.js"></script>

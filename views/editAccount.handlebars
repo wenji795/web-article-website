@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/editAccount.css">
+
+
+<form action="/user/update" method="post">
+    <label for="realName">Real Name:</label>
+    <input type="text" id="realName" name="realName" value="{{user.realName}}" required>
+
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" id="birthDate" name="birthDate" value="{{user.birthDate}}" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required>{{user.description}}</textarea>
+
+    <label for="avatar">Avatar:</label>
+    <select id="avatar" name="avatar">
+        {{#each avatars}}
+            <option value="{{this}}" {{#ifEquals ../user.avatar this}}selected{{/ifEquals}}>{{this}}</option>
+        {{/each}}
+    </select>
+
+    <button type="submit">Update Account</button>
+</form>

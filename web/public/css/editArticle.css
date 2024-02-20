@@ -1,0 +1,35 @@
+/* editArticle.css */
+form#articleForm {
+    max-width: 700px;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form#articleForm label {
+    display: block;
+    margin-top: 1em;
+}
+
+form#articleForm input,
+form#articleForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form#articleForm button {
+    margin-top: 1em;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form#articleForm button:hover {
+    background-color: #0056b3;
+}

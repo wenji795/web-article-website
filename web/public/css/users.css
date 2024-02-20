@@ -1,0 +1,75 @@
+/* public/css/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #0275d8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #025aa5;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#usernameFeedback,
+#passwordFeedback {
+    color: red;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.avatar-selection label {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.avatar-selection img {
+    width: 50px; /* 根据需要调整 */
+    height: 50px; /* 根据需要调整 */
+    border: 1px solid #ccc; /* 可选的边框 */
+    border-radius: 50%; /* 圆形头像 */
+}

@@ -1,0 +1,56 @@
+<!--title-->
+<!--data-->
+<!--context-->
+
+<!---- login-->
+<!--    -- = me-->
+<!--    edit, delete-->
+<!--    -- else-->
+<!--    like-->
+<!--    comment input-->
+
+<!--comment-->
+<!--    hello-->
+<!--        l2 hello-->
+
+<!-- articlesList.handlebars -->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Articles List</title>-->
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+<!--</head>-->
+
+
+<!--<body>-->
+<div class="auth-buttons">
+    <a href="/users/login" class="btn btn-primary">Login</a>
+    <a href="/users/register" class="btn btn-secondary">Sign up</a>
+</div>
+
+<div class="container">
+    <h1>Articles List</h1>
+    <select id="sortField" class="sort-select">
+        <option value="article_title">Title</option>
+        <option value="user_name">Author</option>
+        <option value="create_date">Date</option>
+    </select>
+    <button id="sortOrder" data-order="ASC" class="sort-button">ASC/DESC</button>
+
+    <div id="articlesList">
+        {{#each articles}}
+            <div class="article">
+                <h2>{{this.article_title}}</h2>
+                <p class="author">Author: {{this.user_name}}</p>
+                <p class="date">Date: {{this.create_date}}</p>
+                <p class="content">{{this.article_content}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src="/js/articles.js"></script>
+<!--</body>-->
+<!--</html>-->

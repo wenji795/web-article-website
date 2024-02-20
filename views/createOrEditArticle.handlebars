@@ -1,0 +1,28 @@
+<!-- editArticle.hbs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create/Edit Article</title>
+    <!-- 引入WYSIWYG编辑器的CSS -->
+</head>
+<body>
+<h1>{{#if article}}Edit{{else}}Create{{/if}} Article</h1>
+<form id="articleForm" action="/articles/save" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="articleId" value="{{article.id}}">
+    <input type="text" name="title" placeholder="Article Title" value="{{article.title}}" required>
+    <textarea id="articleContent" name="content">{{article.content}}</textarea>
+    <input type="file" name="image">
+    <button type="submit">{{#if article}}Update{{else}}Submit{{/if}}</button>
+</form>
+
+<script src="https://cdn.tiny.cloud/1/n55czr1hhoz5n777s92rlb3yydoo17xsfhjbpqs0xlhiq78n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: '#articleContent'
+    });
+</script>
+</body>
+</html>
+
+
+

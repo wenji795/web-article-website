@@ -1,0 +1,26 @@
+/* comments.css */
+.comment {
+    margin-top: 1em;
+    padding-left: 1em;
+    border-left: 2px solid #ddd;
+}
+
+.comment p {
+    margin: 0.5em 0;
+}
+
+.comment .replyButton,
+.comment .deleteButton {
+    margin-right: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment .replyButton:hover,
+.comment .deleteButton:hover {
+    background-color: #0056b3;
+}

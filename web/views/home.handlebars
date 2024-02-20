@@ -1,0 +1,76 @@
+<!--    login-->
+<!--    hello: xxx, logout-->
+
+<!--    article asdfsafsad sdaf-->
+<!--    ------>
+<!--    article asdfsafsad sdaf-->
+<!--    ------>
+<!--    article asdfsafsad sdaf  [edit] delete-->
+
+<!--    [create article]-->
+<!--    -->
+<!---->
+
+<!--home.handlebars-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/articles.css">
+    <!-- 其他元数据和CSS链接 -->
+</head>
+<body>
+{{#if loggedIn}}
+    <h1>Welcome back!{{user_name}}</h1>
+        <p><a href="/articles/new">Create/Edit Article</a></p>
+
+        <!-- 添加登出的链接 -->
+        <p><a href="/users/logout">Log Out</a></p>
+{{else}}
+    <h1>Welcome to Our Site</h1>
+    <p>Please <a href="/users/login">login</a> to see personalized content.</p>
+{{/if}}
+
+<select id="sortField" class="sort-select">
+    <option value="article_title">Title</option>
+    <option value="user_name">Author</option>
+    <option value="create_date">Date</option>
+</select>
+<button id="sortOrder" data-order="ASC" class="sort-button">ASC/DESC</button>
+
+<div id="articlesList">
+
+    {{#each articles}}
+        <li class="article-li" data-article-author="{{this.user_name}}" data-article-title="{{this.article_title}}" data-article-date="{{this.update_date}}">
+            <div class="article">
+                <a href="/articles/{{this.article_id}}" class="article-link">
+                    <div class="article">
+                        <h2>{{this.article_title}}</h2>
+                        <p>Author: {{this.user_name}}</p>
+                        <p>Details: {{this.article_content}}</p>
+                        <!-- 其他信息 -->
+                    </div>
+                    {{#if ../loggedIn}}
+
+
+
+                        <div class="like-container">
+                            <p id="likes-count-{{this.article_id}}">Likes: {{this.like_count}}</p>
+                            <!-- 判断并显示用户是否已经点赞 -->
+                            {{#if this.user_has_liked}}
+                                <button disabled>Already Liked</button>
+                            {{else}}
+                                <button type="button" onclick="likeArticle({{this.article_id}}, event)">Like❤️</button>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+                </a>
+            </div>
+        </li>
+    {{/each}}
+</div>
+
+<script src="/js/sortArticles.js"></script>
+<script src="/js/likeArticle.js"></script>
+</body>
+</html>

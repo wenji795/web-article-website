@@ -1,0 +1,83 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.article h2 {
+    color: #0275d8;
+}
+
+.article .author, .article .date {
+    color: #666;
+    font-style: italic;
+}
+
+.article .content {
+    margin-top: 20px;
+}
+
+.sort-select, .sort-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.sort-button {
+    cursor: pointer;
+}
+
+/* 基础按钮样式 */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none; /* 移除a标签的下划线 */
+    color: #ffffff; /* 默认文本颜色 */
+    font-size: 16px; /* 默认字体大小 */
+    border-radius: 5px; /* 圆角边框 */
+    transition: background-color 0.3s ease; /* 平滑的背景色过渡 */
+}
+
+/* 主要按钮样式 - 蓝色 */
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* 鼠标悬停时的颜色 */
+}
+
+/* 次要按钮样式 - 灰色 */
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62; /* 鼠标悬停时的颜色 */
+}

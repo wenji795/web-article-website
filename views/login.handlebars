@@ -1,0 +1,59 @@
+<!--&lt;!&ndash; views/login.handlebars &ndash;&gt;-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Login</title>-->
+<!--    <link rel="stylesheet" href="/css/users.css"> &lt;!&ndash; 确保您有这个 CSS 文件或者更改为正确的路径 &ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="login-container">-->
+<!--    <h2>Login</h2>-->
+<!--    {{#if errorMessage}}-->
+<!--        <div class="error-message">{{errorMessage}}</div>-->
+<!--    {{/if}}-->
+<!--    <form action="/users/login" method="POST"> &lt;!&ndash; 确保这个 action 路径匹配您的后端路由 &ndash;&gt;-->
+<!--        <div class="form-group">-->
+<!--            <label for="username">Username:</label>-->
+<!--            <input type="text" id="username" name="username" required>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="password">Password:</label>-->
+<!--            <input type="password" id="password" name="password" required>-->
+<!--        </div>-->
+<!--        <button type="submit">Login</button>-->
+<!--    </form>-->
+<!--    <p>Don't have an account? <a href="/users/register">Register here</a></p>-->
+<!--</div>-->
+<!--<script src="/js/login.js"></script> &lt;!&ndash; 如果需要前端 JavaScript，确保有这个文件 &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/users.css"> <!-- 确保您有这个 CSS 文件或者更改为正确的路径 -->
+</head>
+<body>
+<div class="login-container">
+    <h2>Login</h2>
+    <div id="error-message" class="error-message" style="display: none;"></div> <!-- 修改用于显示错误消息的元素 -->
+    <form id="loginForm"> <!-- 移除 action 和 method 属性 -->
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/users/register">Register here</a></p>
+</div>
+<script src="/js/login.js"></script> <!-- 确保有这个文件，并更新为异步处理登录 -->
+</body>
+</html>
